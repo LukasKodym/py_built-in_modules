@@ -10,4 +10,3 @@ print(d1.strftime("%d %B, %Y"))
 print(d1)
 print(d1.strftime("%m/%d/%y %H:%M:%S"))
 print(d1.strftime("%d(%a) %B %Y"))
-
