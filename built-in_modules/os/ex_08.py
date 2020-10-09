@@ -12,33 +12,34 @@ if not os.path.exists(base_dir):
 png_dir = os.path.join(base_dir, 'images_png')
 jpg_dir = os.path.join(base_dir, 'images_jpg')
 
-# if not os.path.exists(png_dir):
-#     os.mkdir(png_dir)
-#     for image in images_3:
-#         if image.endswith('.png'):
-#             if not os.path.exists(image):
-#                 file = os.path.join(png_dir, image)
-#                 open(file, 'w')
-#
-# if not os.path.exists(jpg_dir):
-#     os.mkdir(jpg_dir)
-#     for image in images_3:
-#         if image.endswith('.jpg'):
-#             if not os.path.exists(image):
-#                 file = os.path.join(jpg_dir, image)
-#                 open(file, 'w')
-
 if not os.path.exists(png_dir):
     os.mkdir(png_dir)
+
+for image in images_3:
+    if image.endswith('.png'):
+        os.path.exists(image)
+        file = os.path.join(png_dir, image)
+        open(file, 'w').close()
 
 if not os.path.exists(jpg_dir):
     os.mkdir(jpg_dir)
 
 for image in images_3:
-    if image.endswith('.png'):
-        open(os.path.join(png_dir, image), 'w').close()
-    elif image.endswith('.jpg'):
-        open(os.path.join(jpg_dir, image), 'w').close()
+    if image.endswith('.jpg'):
+        file = os.path.join(jpg_dir, image)
+        open(file, 'w').close()
+
+# if not os.path.exists(png_dir):
+#     os.mkdir(png_dir)
+#
+# if not os.path.exists(jpg_dir):
+#     os.mkdir(jpg_dir)
+#
+# for image in images_3:
+#     if image.endswith('.png'):
+#         open(os.path.join(png_dir, image), 'w').close()
+#     elif image.endswith('.jpg'):
+#         open(os.path.join(jpg_dir, image), 'w').close()
 
 for root, dirs, files in os.walk(base_dir):
     print(root)
