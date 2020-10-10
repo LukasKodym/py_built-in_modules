@@ -7,4 +7,6 @@ paths = []
 for name in fnames:
     paths.append(os.path.join(os.getcwd(), name))
 
+# paths = [os.path.join(os.getcwd(), name) for name in fnames]
+
 print(paths)
