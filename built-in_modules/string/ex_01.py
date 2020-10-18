@@ -11,4 +11,3 @@ idx = 0
 
 for i in docs:
     if i:  in code_map_inv.keys():
-
