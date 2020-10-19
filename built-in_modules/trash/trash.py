@@ -15,4 +15,4 @@ template = Template(email)
 
 for name in names:
     print(template.substitute(name=name))
-    print('-' * 35)\
+    print('-' * 35)

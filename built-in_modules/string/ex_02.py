@@ -7,4 +7,3 @@ res = Template('Hello $name,\n\nThank you for visiting our website.\nTeam XYZ\n$
 
 for name in names:
     print(res.substitute(name=name, sign='-' * 35))
-
