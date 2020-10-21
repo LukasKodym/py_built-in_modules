@@ -16,3 +16,9 @@ template = Template(email)
 for name in names:
     print(template.substitute(name=name))
     print('-' * 35)
+
+##
+# usage the 'r' prefix in strings
+
+print('this is text \nseparated by new line')
+print(r'this is text \nseparated by new line')
