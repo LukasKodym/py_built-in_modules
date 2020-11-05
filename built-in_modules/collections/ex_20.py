@@ -7,14 +7,10 @@ Student = namedtuple(typename='Student', field_names=['name', 'age', 'specializa
 f = open('students.txt', 'r')
 
 students = []
+lines = [eval(line.strip()) for line in f.readlines()]
+for line in lines:
+    students.append(Student(**line))
 
-for line in f:
-    print(f.read(), end='')
-
-#
-# for line in f:
-#     students.append(Student(**line))
-#
 f.close()
 
 print(students)
